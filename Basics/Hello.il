@@ -4,6 +4,7 @@
 .method public static void Start()
 {
 	.entrypoint
+	.maxstack	1
 
 	ldstr	"Hello World!"
 	call	void [System.Console]System.Console::WriteLine(string)

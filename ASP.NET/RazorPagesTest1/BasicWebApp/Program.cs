@@ -12,9 +12,6 @@ if (app.Environment.IsDevelopment())
 
 //app.MapGet("/", () => "Hello World!");
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapRazorPages();
-});
+app.MapRazorPages();
 
 app.Run();

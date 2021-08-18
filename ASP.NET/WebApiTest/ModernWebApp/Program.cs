@@ -15,9 +15,6 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/rest/time/now", () => DateTime.Now.ToString());
 app.UseFileServer();
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapControllers();
-});
+app.MapControllers();
 
 app.Run();

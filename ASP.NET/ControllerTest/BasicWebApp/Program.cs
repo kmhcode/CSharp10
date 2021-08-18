@@ -12,9 +12,6 @@ if (app.Environment.IsDevelopment())
 
 //app.MapGet("/", () => "Hello World!");
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapControllerRoute("default", "{action}/{id}", new {controller = "Greeter", id = "Visitor"});
-});
+app.MapControllerRoute("default", "{action}/{id}", new {controller = "Greeter", id = "Visitor"});
 
 app.Run();

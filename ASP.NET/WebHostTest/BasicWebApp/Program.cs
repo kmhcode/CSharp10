@@ -13,9 +13,6 @@ if (app.Environment.IsDevelopment())
 //app.MapGet("/", () => "Hello World!");
 app.UseMiddleware<Pausing>();
 app.UseRouting();
-app.UseEndpoints(endpoints =>
-{
-	endpoints.MapGet("/Greet/{person=Visitor}", Greeting.Welcome);
-});
+app.MapGet("/Greet/{person=Visitor}", Greeting.Welcome);
 
 app.Run();

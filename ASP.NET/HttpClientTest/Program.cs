@@ -1,5 +1,4 @@
-﻿
-using HttpClientTest;
+﻿using HttpClientTest;
 
 string customerId = args[0].ToUpper();
 var model = new OrdersClientModel();

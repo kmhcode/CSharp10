@@ -33,9 +33,9 @@ namespace LinqTest
 					.Elements("contact")
 					.Select(e => new Contact
 					(
-						Name: (string)e.Attribute("name")!,
-						City: (string)e.Element("city")!,
-						Zip: (string)e.Element("zip")!
+						Name: (string)e.Attribute("name"),
+						City: (string)e.Element("city"),
+						Zip: (string)e.Element("zip")
 					))
 					.AsQueryable();
 		}

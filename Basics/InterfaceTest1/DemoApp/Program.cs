@@ -8,7 +8,7 @@ namespace DemoApp
 		{
 			foreach(Account entry in entries)
 			{
-				IProfitable? p = entry as IProfitable;
+				IProfitable p = entry as IProfitable;
 				p?.AddInterest(12);
 			}
 		}

@@ -1,31 +1,33 @@
 #nullable disable
 
-partial class SimpleStack<V>
+namespace GenTypeTest
 {
-	class Node
+	partial class SimpleStack<V>
 	{
-		internal V Value;
-		internal Node Below;
-	}
+		class Node
+		{
+			internal V Value;
+			internal Node Below;
+		}
 
-	private Node top;
+		private Node top;
 
-	public void Push(V item)
-	{
-		top = new Node {Value=item, Below=top};
-	}
+		public void Push(V item)
+		{
+			top = new Node {Value=item, Below=top};
+		}
 
-	public V Pop()
-	{
-		V item = top.Value;
-		top = top.Below;
-		return item;
-	}	
+		public V Pop()
+		{
+			V item = top.Value;
+			top = top.Below;
+			return item;
+		}	
 
-	public bool Empty()
-	{
-		return top == null;
+		public bool Empty()
+		{
+			return top == null;
+		}
 	}
 }
-
 

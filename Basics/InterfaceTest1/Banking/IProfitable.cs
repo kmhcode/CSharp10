@@ -1,7 +1,8 @@
-namespace Banking;
-
-public interface IProfitable
+namespace Banking
 {
-	decimal AddInterest(int months);
+	public interface IProfitable
+	{
+		decimal AddInterest(int months);
+	}
 }
 

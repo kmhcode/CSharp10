@@ -1,17 +1,18 @@
-namespace Banking;
-
-sealed class CurrentAccount : Account
+namespace Banking
 {
-	public override void Deposit(decimal amount)
+	sealed class CurrentAccount : Account
 	{
-		if(Balance < 0)
-			amount *= 0.9M;
-		Balance += amount;
-	}
-	
-	public override void Withdraw(decimal amount)
-	{
-		Balance -= amount;
+		public override void Deposit(decimal amount)
+		{
+			if(Balance < 0)
+				amount *= 0.9M;
+			Balance += amount;
+		}
+		
+		public override void Withdraw(decimal amount)
+		{
+			Balance -= amount;
+		}
 	}
 }
 

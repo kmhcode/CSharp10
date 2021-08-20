@@ -1,16 +1,19 @@
-struct Rectangle
+namespace ObjectClassTest
 {
-	public int Length, Breadth;
-
-	public Rectangle(int length, int breadth)
+	struct Rectangle
 	{
-		Length = length;
-		Breadth = breadth;
-	}
+		public int Length, Breadth;
 
-	public override string ToString()
-	{
-		return $"{Length}X{Breadth}";
+		public Rectangle(int length, int breadth)
+		{
+			Length = length;
+			Breadth = breadth;
+		}
+
+		public override string ToString()
+		{
+			return $"{Length}X{Breadth}";
+		}
 	}
 }
 

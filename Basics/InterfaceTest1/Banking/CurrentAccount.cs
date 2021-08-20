@@ -1,27 +1,28 @@
-namespace Banking;
-
-sealed class CurrentAccount : Account, IChargeable
+namespace Banking
 {
-	public override void Deposit(decimal amount)
+	sealed class CurrentAccount : Account, IChargeable
 	{
-		Balance += amount;
-	}
-	
-	public override void Withdraw(decimal amount)
-	{
-		Balance -= amount;
-	}
-
-	bool IChargeable.Withdraw(decimal rate)
-	{
-		if(Balance < 0)
+		public override void Deposit(decimal amount)
 		{
-			decimal debt = -Balance;
-			Withdraw(debt * rate);
-			return true;
+			Balance += amount;
 		}
-		return false;
-	}
+		
+		public override void Withdraw(decimal amount)
+		{
+			Balance -= amount;
+		}
 
+		bool IChargeable.Withdraw(decimal rate)
+		{
+			if(Balance < 0)
+			{
+				decimal debt = -Balance;
+				Withdraw(debt * rate);
+				return true;
+			}
+			return false;
+		}
+
+	}
 }
 

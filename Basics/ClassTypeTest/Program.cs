@@ -42,3 +42,4 @@ dept[4] = new SalesPerson(166, 44, 32000);
 Console.WriteLine("Number of Employees = {0}", Employee.CountInstances());
 Console.WriteLine("Average Income = {0:0.00}", GetAverageIncome(dept));
 Console.WriteLine("Total Sales = {0:0.00}", GetTotalSales(dept));
+

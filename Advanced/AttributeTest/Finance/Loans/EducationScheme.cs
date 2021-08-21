@@ -1,9 +1,8 @@
-namespace Finance.Loans
+namespace Finance.Loans;
+
+public class EducationScheme
 {
-	public class EducationScheme
-	{
-		[MaxDuration]
-		public float Common(double amount, int years) => 6.5f;
-	}
+	[MaxDuration]
+	public float Common(double amount, int years) => 6.5f;
 }
 

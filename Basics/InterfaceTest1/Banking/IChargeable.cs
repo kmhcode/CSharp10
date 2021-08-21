@@ -1,8 +1,7 @@
-namespace Banking
+namespace Banking;
+
+public interface IChargeable
 {
-	public interface IChargeable
-	{
-		bool Withdraw(decimal rate);
-	}
+	bool Withdraw(decimal rate);
 }
 

@@ -1,29 +1,29 @@
-namespace Banking
+namespace Banking;
+
+public static class Banker
 {
-	public static class Banker
+	private static long nid;
+
+	static Banker()
 	{
-		private static long nid;
+		nid = DateTime.Now.Ticks % 1000000;
+	}
 
-		static Banker()
+	public static Account OpenCurrentAccount()
+	{
+		return new CurrentAccount()
 		{
-			nid = DateTime.Now.Ticks % 1000000;
-		}
+			Id = 100000000L + nid++
+		};
+	}
 
-		public static Account OpenCurrentAccount()
+	public static Account OpenSavingsAccount()
+	{
+		return new SavingsAccount()
 		{
-			return new CurrentAccount()
-			{
-				Id = 100000000L + nid++
-			};
-		}
-
-		public static Account OpenSavingsAccount()
-		{
-			return new SavingsAccount()
-			{
-				Id = 200000000L + nid++
-			};
-		}
+			Id = 200000000L + nid++
+		};
 	}
 }
+
 

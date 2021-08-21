@@ -1,5 +1,4 @@
-namespace Banking
-{
-	public class InsufficientFundsException : ApplicationException {}
-}
+namespace Banking;
+
+public class InsufficientFundsException : ApplicationException {}
 

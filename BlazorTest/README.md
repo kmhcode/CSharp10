@@ -6,3 +6,12 @@ of HTML and C# code known as 'Razor Components'. It includes support for
 2. hosting the razor components in an ASP.NET core web-application to provide 
    the backend services required by these components while they execute within
    the client's web-browser.
+
+Quickly create a minimal hosted WASM project
+
+1. Install the custom project template
+      dotnet new -i BlazorWasmHostedMin
+2. Create new project with above template
+      dotnet new blazorwasmhostedmin -o ModernWebApp
+      dotnet build
+

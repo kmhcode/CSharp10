@@ -9,9 +9,9 @@ of HTML and C# code known as 'Razor Components'. It includes support for
 
 Quickly create a minimal hosted WASM project
 
-1. Install the custom project template
+1. Install the custom project template<br>
       dotnet new -i BlazorWasmHostedMin
-2. Create new project with above template
+2. Create new project with above template<br>
       dotnet new blazorwasmhostedmin -o ModernWebApp
       dotnet build
 
